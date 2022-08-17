@@ -28,3 +28,12 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, from Job2
 
+  job3:
+      runs-on: ubuntu-latest
+      needs: [job2]
+
+      steps:
+        - uses: actions/checkout@v3
+
+        - name: Run a one-line script
+          run: echo Hello, from Job2
